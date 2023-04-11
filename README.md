@@ -5,7 +5,7 @@ sandbox for working on bevy things out in the open
 
 in this `save-load` branch, there are some boiled down versions of things I'm doing with [moonshine_save](https://github.com/Zeenobit/moonshine_save) to load saved geometry data
 - this sandbox version is pretty lo-fi, so to experiment with either of the two paths, 
-create geometry + save it, or load geometry data from file + spawn it, you comment / uncomment the annotated `add_systems` code
+create geometry + save it, or load geometry data from file + spawn it, you'll need to comment / uncomment the annotated `add_systems` code
 
 what I expect the app to look like when running 
 

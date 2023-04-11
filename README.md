@@ -1,2 +1,2 @@
-# bevy-save-load-sandbox
-sandbox for working on saving and loading bevy things out in the open
+# bevy-sandbox
+sandbox for working on bevy things out in the open

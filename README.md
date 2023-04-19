@@ -9,8 +9,6 @@ examples/3d/render_to_texture.rs
 
 ---
 
-what I expect the app to look like when running
-
 ![brown cube on a black background, reflected in a gray mirror](/img/mirror.png)
 
 ## save
@@ -20,8 +18,6 @@ This example corresponds to the "load" example that loads the data this one save
 
 ---
 
-what I expect the app to look like when running
-
 ![emissive green cube on a purple background](/img/save-load.png)
 
 ## load
@@ -30,8 +26,6 @@ Sample bevy app that uses moonshine_save to load object data for an object in th
 This example corresponds to the "save" example that saves the data this one loads
 
 ---
-
-what I expect the app to look like when running
 
 ![emissive green cube on a purple background](/img/save-load.png)
 

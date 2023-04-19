@@ -1,4 +1,5 @@
-#![allow(dead_code)]
+//! Sample bevy app that uses moonshine_save to load object data for an object in the scene.
+//! This example corresponds to the "save" example that saves the data this one loads
 
 use bevy::prelude::*;
 use moonshine_save::prelude::*;
@@ -34,21 +35,10 @@ fn main() {
         .add_plugin(SavePlugin)
         .add_plugin(LoadPlugin)
         .add_systems((
-            //
-            // these are the systems to use if we're loading from the save file, assets/geometry.ron
-            //
             load_from_file(SAVE_FILE_PATH).in_schedule(OnEnter(AppState::CreateMeshesAndMaterials)),
             create_meshes_and_materials.run_if(in_state(AppState::CreateMeshesAndMaterials)),
             spawn_geometry.in_schedule(OnEnter(AppState::SpawnGeometry)),
             setup_camera.in_schedule(OnExit(AppState::SpawnGeometry)),
-
-            //
-            // these are the systems to use if we're creating geometry and saving it
-            //
-            // create_meshes_and_materials.run_if(in_state(AppState::CreateMeshesAndMaterials)),
-            // create_geometry.in_schedule(OnEnter(AppState::SpawnGeometry)),
-            // save_into_file(SAVE_FILE_PATH).in_schedule(OnExit(AppState::SpawnGeometry)),
-            // setup_camera.in_schedule(OnExit(AppState::SpawnGeometry)),
         ))
         .run();
 }
@@ -88,23 +78,6 @@ fn spawn_geometry(
             Save,
         ));
     }
-    app_state.set(AppState::Run)
-}
-
-fn create_geometry(
-    mut commands: Commands,
-    handles: Res<GeometryHandles>,
-    mut app_state: ResMut<NextState<AppState>>,
-) {
-    commands.spawn((
-        PbrBundle {
-            mesh: handles.mesh.clone(),
-            material: handles.material.clone(),
-            transform: Transform::from_xyz(0.0, 0.0, 0.0),
-            ..default()
-        },
-        Save,
-    ));
     app_state.set(AppState::Run)
 }
 

@@ -1,0 +1,8 @@
+[package]
+name = "bevy_sandbox"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+bevy = "0.10.1"
+moonshine-save = "0.1.3"

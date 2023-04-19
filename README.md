@@ -1,21 +1,39 @@
 # bevy-sandbox
-sandbox for working on bevy things out in the open
+sandbox for working on bevy things out in the open. mostly just examples of specific things I want to remember how to do.
 
-## save-load
+## mirror
 
-in this `save-load` branch, there are some boiled down versions of things I'm doing with [moonshine_save](https://github.com/Zeenobit/moonshine_save) to load saved geometry data
-- this sandbox version is pretty lo-fi, so to experiment with either of the two paths, 
-create geometry + save it, or load geometry data from file + spawn it, you'll need to comment / uncomment the annotated `add_systems` code
+A 3D scene where a rotated cube is "reflected in a mirror", i.e. a second camera's view is
+projected onto a plane. Code borrowed and revised from bevy examples/3d/3d_scene.rs and
+examples/3d/render_to_texture.rs
 
-what I expect the app to look like when running 
+---
 
-![emissive green cube on a purple background](/img/app.png)
+what I expect the app to look like when running
 
-## usage
+![emissive green cube on a purple background](/img/mirror.png)
 
-```sh
-cargo run
-```
+## save
+
+Sample bevy app that uses moonshine_save to save object data for an object in the scene.
+This example corresponds to the "load" example that loads the data this one saves
+
+---
+
+what I expect the app to look like when running
+
+![emissive green cube on a purple background](/img/save-load.png)
+
+## load
+
+Sample bevy app that uses moonshine_save to load object data for an object in the scene.
+This example corresponds to the "save" example that saves the data this one loads
+
+---
+
+what I expect the app to look like when running
+
+![emissive green cube on a purple background](/img/save-load.png)
 
 ## license
 all code in this repository is dual-licensed under either:

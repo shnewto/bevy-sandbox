@@ -11,7 +11,7 @@ examples/3d/render_to_texture.rs
 
 what I expect the app to look like when running
 
-![emissive green cube on a purple background](/img/mirror.png)
+![brown cube on a black background, reflected in a gray mirror](/img/mirror.png)
 
 ## save
 

@@ -20,17 +20,13 @@ pub struct GeometryHandles {
 
 const SAVE_FILE_PATH: &str = "assets/geometry.ron";
 
-const PURPLE: &str = "301934";
 const GREEN: &str = "39FF14";
 
 fn main() {
     App::new()
         .add_state::<AppState>()
         .insert_resource(GeometryHandles::default())
-        .insert_resource(ClearColor(
-            Color::hex(PURPLE)
-                .unwrap_or_else(|_| panic!("couldn't make clear color from {PURPLE}")),
-        ))
+        .insert_resource(ClearColor(Color::BLACK))
         .add_plugins(DefaultPlugins)
         .add_plugin(SavePlugin)
         .add_plugin(LoadPlugin)
@@ -80,7 +76,7 @@ fn create_geometry(
 
 fn setup_camera(mut commands: Commands) {
     commands.spawn(Camera3dBundle {
-        transform: Transform::from_xyz(-5.0, 2.5, 0.0).looking_at(Vec3::ZERO, Vec3::Y),
+        transform: Transform::from_xyz(-5.0, 2.5, -2.0).looking_at(Vec3::ZERO, Vec3::Y),
         ..default()
     });
 }

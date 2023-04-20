@@ -11,6 +11,14 @@ examples/3d/render_to_texture.rs
 
 ![brown cube on a black background, reflected in a gray mirror](/img/mirror.png)
 
+## gltf-mesh-png-material
+
+A 3D scene displaying a rotated cube built from a gltf named mesh and png material
+
+---
+
+![purple and gray grid textured cube on a black background](/img/gltf-png.png)
+
 ## save
 
 Sample bevy app that uses moonshine_save to save object data for an object in the scene.

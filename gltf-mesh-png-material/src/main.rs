@@ -45,7 +45,7 @@ pub fn spawn(
         let cube_mesh_handle: Handle<Mesh> = gltf_meshes
             .get(cube_gltf_mesh_handle)
             .and_then(|gltf_mesh| gltf_mesh.primitives.get(0))
-            .map(|terrain_primitive| terrain_primitive.mesh.clone())
+            .map(|cube_primitive| cube_primitive.mesh.clone())
             .unwrap();
 
         let material_handle = materials.add(StandardMaterial {
